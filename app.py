@@ -28,98 +28,101 @@ except LookupError:
 st.set_page_config(page_title="ByteSize Sage", layout="wide", page_icon="🎬")
 
 def main():
-    # Custom CSS - Premium UI/UX
+    # Custom CSS - Premium Dark UI/UX
     st.markdown("""
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
         
         html, body, [class*="css"] {
             font-family: 'Inter', sans-serif;
+            color: #e0e0e0;
         }
 
-        /* Gradient Background */
+        /* Dark Gradient Background */
         .stApp {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
         }
 
-        /* Sidebar Glassmorphism */
+        /* Sidebar Glassmorphism Dark */
         section[data-testid="stSidebar"] {
-            background-color: rgba(255, 255, 255, 0.95) !important;
+            background-color: rgba(15, 23, 42, 0.85) !important;
             backdrop-filter: blur(10px);
-            border-right: 1px solid rgba(0,0,0,0.05);
+            border-right: 1px solid rgba(255,255,255,0.05);
         }
 
         /* Main Header "Hero" */
         .main-header {
-            background: linear-gradient(90deg, #F63366 0%, #FF8E53 100%);
+            background: linear-gradient(90deg, #FF0080 0%, #7928CA 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 3.5rem;
             font-weight: 800;
             text-align: center;
             margin-bottom: 0.5rem;
-            text-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            text-shadow: 0px 0px 20px rgba(121, 40, 202, 0.5);
         }
         
         .sub-header {
             font-size: 1.2rem;
-            color: #555;
+            color: #a0a0a0;
             text-align: center;
             margin-bottom: 3rem;
             font-weight: 400;
         }
 
-        /* Card Styling */
+        /* Card Styling Dark */
         .card {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.05);
             padding: 1.5rem;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             margin-bottom: 1rem;
         }
         
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
         /* Custom Button */
         .stButton>button {
-            background: linear-gradient(90deg, #F63366 0%, #FF8E53 100%);
+            background: linear-gradient(90deg, #FF0080 0%, #7928CA 100%);
             color: white;
             border: none;
             padding: 0.6rem 2rem;
             border-radius: 50px;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(246, 51, 102, 0.3);
+            box-shadow: 0 4px 15px rgba(121, 40, 202, 0.3);
         }
         
         .stButton>button:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(246, 51, 102, 0.5);
+            box-shadow: 0 8px 25px rgba(121, 40, 202, 0.5);
             color: white !important;
         }
 
-        /* Metrics Card */
+        /* Metrics Card Dark */
         .metric-card {
             text-align: center;
             padding: 1rem;
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
         .metric-value {
             font-size: 2rem;
             font-weight: 700;
-            color: #1E1E1E;
+            color: #ffffff;
         }
         .metric-label {
             font-size: 0.9rem;
-            color: #666;
+            color: #a0a0a0;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
