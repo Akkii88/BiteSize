@@ -9,7 +9,8 @@ def test_download_youtube_video(mock_ytdl):
     # Setup mock
     instance = mock_ytdl.return_value
     instance.__enter__.return_value = instance
-    inst
+    instance.extract_info.return_value = {'title': 'test', 'ext': 'mp4'}
+    instance.prepare_filename.return_value = 'downloads/test.mp4'
 
     pipeline = VideoPipeline()
     filename = pipeline.download_youtube_video("http://youtube.com/watch?v=123")
