@@ -35,8 +35,9 @@ jobs:
         
     - name: Download NLTK data
       run: |
-        python -m nltk.downloader punkt
+        python -c "import nltk; nltk.download('punkt_tab')"
         
     - name: Test with pytest
       run: |
         pytest
+
